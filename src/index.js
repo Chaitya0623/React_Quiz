@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Quiz from "./Quiz";
+import { QuizProvider } from "./quizContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
+  // StrictMode helps inchighlighting potential problems like identifying unsafe lifecycles, warning during fetching API's
+  // JSX format is used to use HTML format in JavaScript
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    {/* QuizProvider helps in forming a quiz */}
+    <QuizProvider>
+      <Quiz />
+    </QuizProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,13 +1,168 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div {
+  box-sizing: border-box;
+}
+
+.quiz {
+  width: 975px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.question {
+  background-color: #0094da;
+  color: white;
+  padding: 10px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 20px;
+}
+
+.results {
+  background-color: #fff;
+  height: 300px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.congratulations {
+  background-color: #0094da;
+  padding: 20px;
+  font-size: 36px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.results-info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.answer {
+  width: 48%;
+  background: #fff;
+  border: 2px solid #0094da;
+  min-height: 60px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.answer-letter {
+  font-size: 25px;
+  background-color: #0084da;
+  color: #fff;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.answer-text {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.correct-answer {
+  border: 2px solid #1ea55b;
+}
+
+.correct-answer .answer-letter {
+  background: #1ea55b;
+}
+
+.wrong-answer {
+  border: 2px solid #dc0a0a;
+}
+
+.wrong-answer .answer-letter {
+  background: #dc0a0a;
+}
+
+.next-button {
+  margin: 0 auto;
+  color: #fff;
+  background: #0b0e21;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.next-button:hover{
+  scale: 1.05;
+  transform: 0.4s;
+  cursor: pointer;
+}
+
+.restart{
+  margin-top: 30px;
+  width: 200px;
+}
+
+.score {
+  background: #fff;
+  color: 000;
+  font-size: 18px;
+  width: 200px;
+  margin: 0 auto;
+  font-weight: 600;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid #0094da;
+}
+
+/* To disable options once it's selected */
+.disabled-answer {
+  pointer-events: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px){
+  .quiz{
+    width: 90%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  .question{
+    width: 80%;
+  }
+  .answers{
+    display: inline-block;
+  }
+  .answer {
+    width: 300px;
+  }
+  .results{
+    height: 330px;
+  }
 }
